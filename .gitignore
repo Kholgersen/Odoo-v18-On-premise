@@ -1,0 +1,12 @@
+*.pyc
+*.pyo
+__pycache__/
+.DS_Store
+.vscode/
+.idea/
+.settings/
+.env
+*.log
+filestore/
+sessions/
+addons/*/static/lib/
