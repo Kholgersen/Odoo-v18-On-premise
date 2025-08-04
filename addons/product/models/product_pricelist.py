@@ -79,6 +79,21 @@ class Pricelist(models.Model):
                 vals['name'] = _("%s (copy)", pricelist.name)
         return vals_list
 
+    def action_share_pricelist(self):
+        """Open the share wizard for this pricelist."""
+        self.ensure_one()
+        return {
+            'name': _('Share Price List'),
+            'type': 'ir.actions.act_window',
+            'view_mode': 'form',
+            'res_model': 'pricelist.share.wizard',
+            'target': 'new',
+            'context': {
+                'default_pricelist_id': self.id,
+                'default_pricelist_name': self.name,
+            },
+        }
+
     def _get_products_price(self, products, *args, **kwargs):
         """Compute the pricelist prices for the specified products, quantity & uom.
 

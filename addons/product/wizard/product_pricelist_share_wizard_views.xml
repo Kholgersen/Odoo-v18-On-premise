@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_pricelist_share_wizard_form" model="ir.ui.view">
+        <field name="name">pricelist.share.wizard.form</field>
+        <field name="model">pricelist.share.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Share Price List">
+                <sheet>
+                    <group>
+                        <field name="pricelist_id" readonly="1"/>
+                        <field name="partner_ids" widget="many2many_tags"/>
+                    </group>
+                    <group>
+                        <field name="file_format" widget="radio"/>
+                        <field name="subject"/>
+                    </group>
+                    <field name="body" widget="html" options="{'style-inline': true}"/>
+                    <group>
+                        <field name="attachment_ids" widget="many2many_binary"/>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_send_pricelist" string="Send" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>
