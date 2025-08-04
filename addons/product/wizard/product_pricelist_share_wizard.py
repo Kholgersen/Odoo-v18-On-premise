@@ -15,12 +15,17 @@ class PricelistShareWizard(models.TransientModel):
                                   domain=[('customer_rank', '>', 0)])
     subject = fields.Char(string='Subject', required=True, 
                          default=lambda self: _('Price List: %s') % self.env.context.get('default_pricelist_name', ''))
-    body = fields.Html(string='Message', required=True, 
-                      default=lambda self: _("
-                          <p>Hello,</p>
-                          <p>Please find attached your custom price list.</p>
-                          <p>Best regards,</p>
-                      "))
+    body = fields.Html(
+        string='Message',
+        required=True,
+        default=lambda self: _(
+            """
+            <p>Hello,</p>
+            <p>Please find attached your custom price list.</p>
+            <p>Best regards,</p>
+            """
+        )
+    )
     attachment_ids = fields.Many2many('ir.attachment', string='Additional Attachments')
     file_format = fields.Selection([
         ('excel', 'Excel'),
