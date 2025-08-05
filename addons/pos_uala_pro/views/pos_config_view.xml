@@ -8,12 +8,20 @@
             <xpath expr="//div[@class='row mt16 o_settings_container' and not(@id)]" position="inside">
                 <setting string="Ualá Pro Payment Terminal" help="Aceptar pagos con una terminal de pago Ualá Pro">
                     <field name="iface_uala_pro"/>
-                    <field name="uala_pro_api_key" string="API Key" invisible="not iface_uala_pro"/>
-                    <field name="uala_pro_terminal_id" string="Terminal ID" invisible="not iface_uala_pro"/>
-                    <field name="uala_pro_client_id" string="Client ID" invisible="not iface_uala_pro"/>
-                    <field name="uala_pro_client_secret" string="Client Secret" invisible="not iface_uala_pro" password="True"/>
-                    <field name="uala_pro_merchant_id" string="Merchant ID" invisible="not iface_uala_pro"/>
-                    <field name="uala_pro_env" string="Entorno" invisible="not iface_uala_pro"/>
+                    <group string="Credenciales Ualá Pro" invisible="not iface_uala_pro">
+                        <label for="uala_pro_api_key"/>
+                        <field name="uala_pro_api_key"/>
+                        <label for="uala_pro_terminal_id"/>
+                        <field name="uala_pro_terminal_id"/>
+                        <label for="uala_pro_client_id"/>
+                        <field name="uala_pro_client_id"/>
+                        <label for="uala_pro_client_secret"/>
+                        <field name="uala_pro_client_secret" password="True"/>
+                        <label for="uala_pro_merchant_id"/>
+                        <field name="uala_pro_merchant_id"/>
+                        <label for="uala_pro_env"/>
+                        <field name="uala_pro_env"/>
+                    </group>
                 </setting>
             </xpath>
         </field>
