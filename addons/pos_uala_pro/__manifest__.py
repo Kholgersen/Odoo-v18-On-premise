@@ -7,6 +7,7 @@
     "data": [
         "views/pos_config_view.xml",
         "views/pos_payment_method_view.xml",
+        "views/res_config_settings_view.xml",
         "security/ir.model.access.csv"
     ],
     "assets": {

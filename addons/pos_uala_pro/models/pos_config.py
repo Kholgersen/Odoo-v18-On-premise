@@ -1,5 +1,14 @@
 from odoo import models, fields
 
+class ResConfigSettings(models.TransientModel):
+    _inherit = 'res.config.settings'
+
+    module_pos_uala_pro = fields.Boolean(
+        string="Ualá Pro",
+        help="Aceptar pagos con una terminal de pago Ualá Pro en el POS"
+    )
+from odoo import models, fields
+
 class PosConfig(models.Model):
     _inherit = 'pos.config'
 
