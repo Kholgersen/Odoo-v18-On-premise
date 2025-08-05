@@ -4,24 +4,12 @@
         <field name="model">pos.config</field>
         <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
         <field name="arch" type="xml">
-            <xpath expr="//div[@id='payment_terminals']" position="inside">
-                <div class="col-6 col-lg-4">
-                    <div class="o_setting_box">
-                        <div class="o_setting_left_pane">
-                            <field name="iface_uala_pro"/>
-                        </div>
-                        <div class="o_setting_right_pane">
-                            <label for="iface_uala_pro"/>
-                            <div class="text-muted">
-                                Aceptar pagos con una terminal de pago Ualá Pro
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </xpath>
-            <xpath expr="//div[@id='payment_terminals']" position="after">
-                <field name="uala_pro_api_key" attrs="{'invisible': [('iface_uala_pro', '=', False)]}"/>
-                <field name="uala_pro_terminal_id" attrs="{'invisible': [('iface_uala_pro', '=', False)]}"/>
+            <xpath expr="//div[@class='row mt16 o_settings_container' and not(@id)]" position="inside">
+                <setting string="Ualá Pro Payment Terminal" help="Aceptar pagos con una terminal de pago Ualá Pro">
+                    <field name="iface_uala_pro"/>
+                    <field name="uala_pro_api_key" attrs="{'invisible': [('iface_uala_pro', '=', False)]}"/>
+                    <field name="uala_pro_terminal_id" attrs="{'invisible': [('iface_uala_pro', '=', False)]}"/>
+                </setting>
             </xpath>
         </field>
     </record>
