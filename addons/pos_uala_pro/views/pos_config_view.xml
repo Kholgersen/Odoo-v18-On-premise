@@ -4,7 +4,6 @@
         <field name="name">pos.config.form.uala.pro</field>
         <field name="model">pos.config</field>
         <field name="inherit_id" ref="point_of_sale.pos_config_view_form"/>
-        <field name="uala_pro_env" string="Entorno" invisible="not iface_uala_pro"/>
         <field name="arch" type="xml">
             <xpath expr="//div[@class='row mt16 o_settings_container' and not(@id)]" position="inside">
                 <setting string="Ualá Pro Payment Terminal" help="Aceptar pagos con una terminal de pago Ualá Pro">
@@ -14,6 +13,7 @@
                     <field name="uala_pro_client_id" string="Client ID" invisible="not iface_uala_pro"/>
                     <field name="uala_pro_client_secret" string="Client Secret" invisible="not iface_uala_pro" password="True"/>
                     <field name="uala_pro_merchant_id" string="Merchant ID" invisible="not iface_uala_pro"/>
+                    <field name="uala_pro_env" string="Entorno" invisible="not iface_uala_pro"/>
                 </setting>
             </xpath>
         </field>
