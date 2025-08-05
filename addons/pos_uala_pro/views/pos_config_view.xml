@@ -7,8 +7,8 @@
             <xpath expr="//div[@class='row mt16 o_settings_container' and not(@id)]" position="inside">
                 <setting string="Ualá Pro Payment Terminal" help="Aceptar pagos con una terminal de pago Ualá Pro">
                     <field name="iface_uala_pro"/>
-                    <field name="uala_pro_api_key" attrs="{'invisible': [('iface_uala_pro', '=', False)]}"/>
-                    <field name="uala_pro_terminal_id" attrs="{'invisible': [('iface_uala_pro', '=', False)]}"/>
+                    <field name="uala_pro_api_key" invisible="not iface_uala_pro"/>
+                    <field name="uala_pro_terminal_id" invisible="not iface_uala_pro"/>
                 </setting>
             </xpath>
         </field>
