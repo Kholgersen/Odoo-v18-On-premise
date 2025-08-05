@@ -9,6 +9,9 @@
                     <field name="iface_uala_pro"/>
                     <field name="uala_pro_api_key" invisible="not iface_uala_pro"/>
                     <field name="uala_pro_terminal_id" invisible="not iface_uala_pro"/>
+                    <field name="uala_pro_client_id" invisible="not iface_uala_pro"/>
+                    <field name="uala_pro_client_secret" invisible="not iface_uala_pro" password="True"/>
+                    <field name="uala_pro_merchant_id" invisible="not iface_uala_pro"/>
                 </setting>
             </xpath>
         </field>

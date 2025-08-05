@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="uala_pro_payment.Button">
+        <button type="button" class="button uala-pro-action" t-on-click="onUalaProClick">
+            Iniciar pago Ualá Pro
+        </button>
+        <button type="button" class="button uala-pro-cancel" t-on-click="onUalaProCancel" t-if="state === 'waiting'">
+            Cancelar pago Ualá Pro
+        </button>
+    </t>
+</templates>

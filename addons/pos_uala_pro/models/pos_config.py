@@ -18,3 +18,6 @@ class PosConfig(models.Model):
     )
     uala_pro_api_key = fields.Char("Ualá Pro API Key")
     uala_pro_terminal_id = fields.Char("Ualá Pro Terminal ID")
+    uala_pro_client_id = fields.Char("Ualá Pro Client ID")
+    uala_pro_client_secret = fields.Char("Ualá Pro Client Secret")
+    uala_pro_merchant_id = fields.Char("Ualá Pro Merchant ID")
