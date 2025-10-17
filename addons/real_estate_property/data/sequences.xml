@@ -1,0 +1,8 @@
+<odoo>
+    <record id="seq_real_property" model="ir.sequence">
+        <field name="name">Propiedad Inmobiliaria</field>
+        <field name="code">real.property</field>
+        <field name="prefix">PROP-</field>
+        <field name="padding">4</field>
+    </record>
+</odoo>
