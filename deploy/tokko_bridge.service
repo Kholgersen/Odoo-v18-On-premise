@@ -1,0 +1,14 @@
+[Unit]
+Description=Tokko Bridge FastAPI service
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/srv/tokko_bridge
+EnvironmentFile=/srv/tokko_bridge/.env
+ExecStart=/srv/tokko_bridge/venv/bin/uvicorn app:app --host 127.0.0.1 --port 8001 --workers 1
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

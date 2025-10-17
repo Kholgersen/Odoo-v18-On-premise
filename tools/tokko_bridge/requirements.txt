@@ -1,0 +1,5 @@
+fastapi==0.101.1
+httpx==0.24.1
+uvicorn==0.22.0
+pydantic==2.6.0
+SQLAlchemy==2.0.22
