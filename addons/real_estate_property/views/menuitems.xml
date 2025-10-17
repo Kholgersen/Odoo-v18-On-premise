@@ -1,0 +1,4 @@
+<odoo>
+    <menuitem id="menu_real_estate_root" name="Inmobiliaria" sequence="10"/>
+    <menuitem id="menu_real_property" name="Propiedades" parent="menu_real_estate_root" action="action_real_property"/>
+</odoo>
